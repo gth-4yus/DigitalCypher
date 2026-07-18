@@ -1,0 +1,71 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Password Strength Analyzer</title>
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <h1>D-cypher</h1>
+            <h2>Password Strength Analyzer</h2>
+            <form method="POST">
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    autocomplete="new-password"
+                    required
+                />
+                <div class="button-group">
+                    <button type="submit">Analyze</button>
+                    <button
+                        type="submit"
+                        name="clear"
+                        value="clear"
+                        formnovalidate
+                    >
+                        Clear
+                    </button>
+                </div>
+            </form>
+
+            {% if hashed %}
+            <div class="results">
+                <p>
+                    <strong>Hashed Password:</strong>
+                    <span class="hashed">{{ hashed }}</span>
+                </p>
+                <p><strong>Original Password:</strong> {{ decoded }}</p>
+                <div class="progress-bar">
+                    <div
+                        class="fill {% if strength >= 75 %}strong{% elif strength >= 50 %}medium{% else %}weak{% endif %}"
+                        style="width: {% if strength %}{{ strength }}{% else %}0{% endif %}%;"
+                    >
+                        {{ strength }}%
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            <div class="guidelines">
+                <h2>Password Strength Guidelines</h2>
+                <ul>
+                    <li>Use at least 8 characters</li>
+                    <li>Include uppercase and lowercase letters</li>
+                    <li>Include numbers and special characters (e.g. !@#$%&)</li>
+                    <li>Avoid common words and patterns</li>
+                </ul>
+            </div>
+            <div class="tagline">
+                <h3>
+                    <b><i>"Check the strength of your password. Store only the strong."</i></b>
+                </h3>
+            </div>
+        </div>
+    </body>
+</html>

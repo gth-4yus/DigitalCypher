@@ -1,0 +1,352 @@
+/* =========================
+   D-CYPHER STYLE SHEET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
+}
+
+body{
+
+    background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
+
+    color:#f8fafc;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container{
+
+    width:100%;
+
+    max-width:700px;
+
+    background:#1e293b;
+
+    border:1px solid #334155;
+
+    border-radius:18px;
+
+    padding:40px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.35);
+
+    transition:.3s;
+
+}
+
+.container:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1{
+
+    text-align:center;
+
+    color:#f8fafc;
+
+    font-size:2.7rem;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+h2{
+
+    text-align:center;
+
+    color:#94a3b8;
+
+    font-weight:400;
+
+    margin-bottom:30px;
+
+}
+
+h3{
+
+    color:#2563eb;
+
+    margin-top:20px;
+
+    margin-bottom:10px;
+
+}
+
+/* =========================
+   PASSWORD INPUT
+========================= */
+
+input[type="password"]{
+
+    width:100%;
+
+    padding:16px;
+
+    border-radius:10px;
+
+    border:1px solid #475569;
+
+    background:#334155;
+
+    color:#f8fafc;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+input[type="password"]::placeholder{
+
+    color:#94a3b8;
+
+}
+
+input[type="password"]:focus{
+
+    border:1px solid #2563eb;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.20);
+
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.button-group{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:22px;
+
+}
+
+button{
+
+    flex:1;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+button:first-child{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+button:last-child{
+
+    background:#dc2626;
+
+    color:white;
+
+}
+
+button:hover{
+
+    opacity:.9;
+
+    transform:translateY(-2px);
+
+}
+
+/* =========================
+   RESULT SECTION
+========================= */
+
+.results{
+
+    margin-top:30px;
+
+    padding:22px;
+
+    background:#334155;
+
+    border-radius:12px;
+
+}
+
+.results p{
+
+    margin:15px 0;
+
+    line-height:1.6;
+
+}
+
+/* =========================
+   HASHED PASSWORD
+========================= */
+
+.hashed{
+
+    color:#60a5fa;
+
+    word-break:break-all;
+
+    font-size:14px;
+
+}
+
+/* =========================
+   PROGRESS BAR
+========================= */
+
+.progress-bar{
+
+    width:100%;
+
+    height:28px;
+
+    background:#475569;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    margin-top:15px;
+
+}
+
+.fill{
+
+    height:100%;
+
+    color:white;
+
+    font-weight:bold;
+
+    text-align:center;
+
+    line-height:28px;
+
+    transition:width .5s ease;
+
+}
+
+/* =========================
+   PASSWORD GUIDELINES
+========================= */
+
+.guidelines{
+
+    margin-top:35px;
+
+    background:#334155;
+
+    border-radius:12px;
+
+    padding:22px;
+
+}
+
+.guidelines h2{
+
+    color:#2563eb;
+
+    margin-bottom:18px;
+
+}
+
+.guidelines ul{
+
+    margin-left:22px;
+
+}
+
+.guidelines li{
+
+    margin-bottom:12px;
+
+    color:#e2e8f0;
+
+}
+
+/* =========================
+   TAGLINE
+========================= */
+
+.tagline{
+
+    margin-top:35px;
+
+    text-align:center;
+
+    color:#94a3b8;
+
+    font-size:17px;
+
+    font-style:italic;
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:700px){
+
+.container{
+
+    padding:25px;
+
+}
+
+.button-group{
+
+    flex-direction:column;
+
+}
+
+h1{
+
+    font-size:2rem;
+
+}
+
+}
