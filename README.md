@@ -120,7 +120,7 @@ http://127.0.0.1:5000
 
 ## 📸 Preview
 
-*(I'll add it later after the complition of the project)*
+
 
 ---
 
